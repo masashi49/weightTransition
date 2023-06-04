@@ -1,5 +1,11 @@
 import React from 'react';
 
 export const Footer = () => {
-  return <footer>@2023 YMDM</footer>;
+  return (
+    <div>
+      <label id='username'>email</label>
+      <input aria-labelledby='username' />
+      <footer>@2023 YMDM</footer>
+    </div>
+  );
 };
