@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const Header = () => {
+export const Header = () => {
   return (
     <header>
       <h1>
@@ -11,5 +11,3 @@ const Header = () => {
     </header>
   );
 };
-
-export default Header;

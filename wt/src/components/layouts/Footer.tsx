@@ -1,7 +1,5 @@
 import React from 'react';
 
-const Header = () => {
+export const Footer = () => {
   return <footer>@2023 YMDM</footer>;
 };
-
-export default Header;
