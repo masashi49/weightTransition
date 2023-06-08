@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import Home from '@/components/pages/Home';
+import { Home } from '@/components/pages/home';
 
-export default function Top() {
+export default function TopPage() {
   return (
     <main>
       <Home />
