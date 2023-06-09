@@ -2,9 +2,5 @@ import Image from 'next/image';
 import { Home } from '@/components/pages/home';
 
 export default function TopPage() {
-  return (
-    <main>
-      <Home />
-    </main>
-  );
+  return <Home />;
 }

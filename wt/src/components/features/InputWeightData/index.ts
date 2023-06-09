@@ -1,0 +1,1 @@
+export { InputWeightData } from './InputWeightData';

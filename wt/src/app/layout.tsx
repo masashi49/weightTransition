@@ -16,9 +16,11 @@ export default function RootLayout({
     <html lang='en'>
       <head />
       <body className='max-w-xl'>
-        <Header />
-        {children}
-        <Footer />
+        <main>
+          <Header />
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
   );

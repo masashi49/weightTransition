@@ -2,21 +2,32 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
+import { InputWeightData } from '@/components/features/InputWeightData';
+import { WeightGraph } from '@/components/features/WeightGraph';
 
 export const Home = () => {
-  const [count, setCount] = useState<number>(0);
   const weightAdd = () => {
-    console.log(count);
+    // 体重を追加するエリアを表示する
   };
-  const changeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+
+  const handleChangeWeight = (e: React.ChangeEvent<HTMLInputElement>) => {
     const weigthNumber = e.target.value;
-    setCount(Number(weigthNumber));
+    console.log(weigthNumber);
   };
+
   return (
-    <main>
-      <p>体重を入力してください。</p>
-      <input type='number' value={count} onChange={changeInput} />
-      <button onClick={weightAdd}>追加</button>
-    </main>
+    <div>
+      <div className='flex justify-around items-center'>
+        <p className=''>体重</p>
+        <button
+          onClick={weightAdd}
+          className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
+        >
+          追加
+        </button>
+      </div>
+      <WeightGraph />
+      <InputWeightData />
+    </div>
   );
 };
