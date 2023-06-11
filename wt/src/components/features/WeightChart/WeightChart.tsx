@@ -10,8 +10,8 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
-import { Line } from 'react-chartjs-2';
 import { useWeightCharDatas } from './useWeightCharDatas';
+import { WeightChartDatail } from './WeightChartDatail';
 
 ChartJS.register(
   CategoryScale,
@@ -24,6 +24,7 @@ ChartJS.register(
 );
 
 export const WeightChart = () => {
-  const { data, options } = useWeightCharDatas();
-  return <Line options={options} data={data} />;
+  const { data } = useWeightCharDatas();
+
+  return <WeightChartDatail data={data} />;
 };

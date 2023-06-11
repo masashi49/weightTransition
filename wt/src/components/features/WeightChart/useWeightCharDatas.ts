@@ -1,15 +1,15 @@
 import React from 'react';
 
-export const useWeightCharDatas = () => {
-  const options = {
-    responsive: true,
-    plugins: {
-      legend: {
-        display: false,
-      },
+export const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      display: false,
     },
-  };
+  },
+};
 
+export const useWeightCharDatas = () => {
   const labels = ['5/30', '5/31', '6/1', '6/2', '6/3', '6/4', '6/5'];
 
   const data = {
@@ -22,5 +22,5 @@ export const useWeightCharDatas = () => {
       },
     ],
   };
-  return { options, data };
+  return { data };
 };

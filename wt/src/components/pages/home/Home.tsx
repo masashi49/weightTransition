@@ -2,14 +2,14 @@
 
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
-import { useState } from 'react';
-import { InputWeightData } from '@/components/features/InputWeightData';
+import { useCallback, useState } from 'react';
+import Modal from 'react-modal';
+import { AddWeightDataModal } from '@/components/features/AddWeightDataModal';
 import { WeightChart } from '@/components/features/WeightChart';
 
 export const Home = () => {
-  const weightAdd = () => {
-    // 体重を追加するエリアを表示する
-  };
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const weightAdd = useCallback(() => setIsOpen(!isOpen), [isOpen]);
 
   const handleChangeWeight = (e: React.ChangeEvent<HTMLInputElement>) => {
     const weigthNumber = e.target.value;
@@ -27,8 +27,9 @@ export const Home = () => {
           追加
         </button>
       </div>
+      <div id='weightDataArea'></div>
+      <AddWeightDataModal isOpen={isOpen} weightAdd={weightAdd} />
       <WeightChart />
-      <InputWeightData />
     </div>
   );
 };
