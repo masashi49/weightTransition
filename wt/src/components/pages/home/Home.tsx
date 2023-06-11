@@ -1,9 +1,10 @@
 'use client';
 
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { InputWeightData } from '@/components/features/InputWeightData';
-import { WeightGraph } from '@/components/features/WeightGraph';
+import { WeightChart } from '@/components/features/WeightChart';
 
 export const Home = () => {
   const weightAdd = () => {
@@ -26,7 +27,7 @@ export const Home = () => {
           追加
         </button>
       </div>
-      <WeightGraph />
+      <WeightChart />
       <InputWeightData />
     </div>
   );

@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { within, userEvent } from '@storybook/testing-library';
-import { WeightGraph } from './WeightGraph';
+import { WeightChart } from './WeightChart';
 
-const meta: Meta<typeof WeightGraph> = {
-  title: 'layouts/WeightGraph',
-  component: WeightGraph,
+const meta: Meta<typeof WeightChart> = {
+  title: 'layouts/WeightChart',
+  component: WeightChart,
   parameters: {
     nextjs: {
       appDirectory: true,
@@ -13,6 +13,6 @@ const meta: Meta<typeof WeightGraph> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof WeightGraph>;
+type Story = StoryObj<typeof WeightChart>;
 
 export const Default: Story = {};

@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import { WeightGraph } from './WeightGraph';
+import { WeightChart } from './WeightChart';
 
 describe('Rendering', () => {
   it('Should render hello text', () => {
-    render(<WeightGraph />);
+    render(<WeightChart />);
     expect(screen.getByText('グラフです')).toBeInTheDocument();
   });
 });
