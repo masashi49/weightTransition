@@ -15,7 +15,7 @@ export const Home = () => {
     const weigthNumber = e.target.value;
     console.log(weigthNumber);
   };
-
+  Modal.setAppElement('#weightDataArea');
   return (
     <div>
       <div className='flex justify-around items-center'>

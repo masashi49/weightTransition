@@ -4,7 +4,11 @@ import { AddWeightDataModal } from './AddWeightDataModal';
 
 describe('Rendering', () => {
   it('Should render hello text', () => {
-    render(<AddWeightDataModal />);
-    expect(screen.getByText('@2023 YMDM')).toBeInTheDocument();
+    render(
+      <>
+        <AddWeightDataModal isOpen={true} weightAdd={() => console.log(1)} />
+      </>
+    );
+    expect(screen.getByText('閉じる')).toBeInTheDocument();
   });
 });

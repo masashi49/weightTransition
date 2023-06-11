@@ -7,16 +7,17 @@ type Props = {
   weightAdd: () => void;
 };
 export const AddWeightDataModal: FC<Props> = ({ isOpen, weightAdd }) => {
-  Modal.setAppElement('#weightDataArea');
   return (
-    <Modal isOpen={isOpen}>
-      <InputWeightData />
-      <button
-        onClick={weightAdd}
-        className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
-      >
-        閉じる
-      </button>
-    </Modal>
+    <>
+      <Modal isOpen={isOpen} ariaHideApp={false}>
+        <InputWeightData />
+        <button
+          onClick={weightAdd}
+          className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
+        >
+          閉じる
+        </button>
+      </Modal>
+    </>
   );
 };
