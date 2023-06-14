@@ -5,7 +5,7 @@ import {
   getFirestore,
   setDoc,
 } from 'firebase/firestore';
-// import '@/utils/firebase/init' // Initialize FirebaseApp
+// import '@/utils/firebase/initial' // Initialize FirebaseApp
 
 export type Book = {
   id: string;

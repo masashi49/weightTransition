@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 import { useCallback, useState } from 'react';
 import Modal from 'react-modal';
 import { getApp, FirebaseApp } from 'firebase/app';
-import '@/utils/firebase/init';
+import '@/utils/firebase/initial';
 import { AddWeightDataModal } from '@/components/features/AddWeightDataModal';
 import { WeightChart } from '@/components/features/WeightChart';
 
