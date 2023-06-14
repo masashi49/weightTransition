@@ -12,6 +12,7 @@ import {
 } from 'chart.js';
 import { useWeightCharDatas } from './useWeightCharDatas';
 import { WeightChartDatail } from './WeightChartDatail';
+import { useBooks } from '@/components/hooks/useBooks';
 
 ChartJS.register(
   CategoryScale,
@@ -25,6 +26,19 @@ ChartJS.register(
 
 export const WeightChart = () => {
   const { data } = useWeightCharDatas();
+  const { isLoading, books } = useBooks();
 
-  return <WeightChartDatail data={data} />;
+  if (isLoading) return <p>loading</p>;
+  return (
+    <>
+      <ul>
+        {books.map((book) => (
+          <li key={book.id}>
+            {book.title} / {book.author} / {book.price}
+          </li>
+        ))}
+      </ul>
+      <WeightChartDatail data={data} />
+    </>
+  );
 };

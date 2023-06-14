@@ -4,6 +4,8 @@ import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { useCallback, useState } from 'react';
 import Modal from 'react-modal';
+import { getApp, FirebaseApp } from 'firebase/app';
+import '@/utils/firebase/init';
 import { AddWeightDataModal } from '@/components/features/AddWeightDataModal';
 import { WeightChart } from '@/components/features/WeightChart';
 
@@ -16,6 +18,7 @@ export const Home = () => {
     console.log(weigthNumber);
   };
   Modal.setAppElement('#weightDataArea');
+
   return (
     <div>
       <div className='flex justify-around items-center'>
